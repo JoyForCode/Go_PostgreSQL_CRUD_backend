@@ -1,3 +1,4 @@
+// Scheduled for deprecation once models directory is created and contains an updated version of the data structure
 package models
 
 import "time"
