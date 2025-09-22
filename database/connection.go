@@ -76,6 +76,7 @@ func PoolConnect() *pgxpool.Pool {
 	return pool
 }
 
+//Marked for deprecation once crud operations are defined in a different code file
 func CreateUsersTable(conn *pgx.Conn) error {
 	query := `CREATE TABLE IF NOT EXISTS users (
 		id SERIAL PRIMARY KEY,
@@ -88,6 +89,7 @@ func CreateUsersTable(conn *pgx.Conn) error {
 	return err
 }
 
+//Marked for deprecation will be replaced by a newer function to address pgxpool intergration
 func TestConnection(conn *pgx.Conn) error {
 	var result string
 	err := conn.QueryRow(context.Background(), "SELECT 'Database is working!'").Scan(&result)
